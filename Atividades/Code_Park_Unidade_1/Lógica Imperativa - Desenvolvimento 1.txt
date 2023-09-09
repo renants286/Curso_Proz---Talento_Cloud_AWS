@@ -1,0 +1,53 @@
+#LÓGICA IMPERATIVA - DESENVOLVIMENTO 1
+
+*ENUNCIADO:
+
+Pedro foi ao supermercado e comprou ovos, leite, farinha, açúcar, manteiga e achocolatado em pó para fazer um bolo de chocolate. Como ele nunca fez um bolo antes, ele está bastante confuso e perdido. Auxilie Pedro construindo uma sequência lógica dos passos necessários para a preparação desse bolo.***
+
+
+*RESOLUÇÃO:
+
+1 - Separar Recipientes, Utensílios e Eletrodomésticos:
+	1.1 - Reservar Liquidificador;
+	1.2 - Reservar 01 Xícara (chá) para medição dos ingredientes;
+	1.3 - Reservar 02 Colheres (sopa) para medição dos ingredientes;
+	1.4 - Reservar uma Forma de alumínio;
+	1.5 - Verificar funcionamento do Forno e ligá-lo para pré-aquecer a 180 graus Centígrados;
+
+2 - Separar os Igredientes:
+	2.1 - Úmidos:
+		2.1.1 - Reservar 04 Ovos;
+		2.1.2 - Reservar o Leite;
+		2.1.3 - Reservar a Manteiga;
+	2.2 - Secos:
+		2.2.1 - Reservar a Farinha de trigo;
+		2.2.2 - Reservar o Açucar;
+		2.2.3 - Reservar o Achocolatado em pó;
+		2.2.4 - Reservar o Fermento em pó;
+
+3 - Utilize 01 guardanado, ou papel toalha generosamente umedecido em óleo de soja ou margarina para untar a forma;
+
+4 - Preparar a massa (no Liquidificador)
+	4.1 - Quebrar os 04 Ovos dentro do Liquidificador;
+	4.2 - Adicionar os Secos:
+		4.2.1 - Adicionar 02 Xícaras de Açucar;
+		4.2.2 - Adicionar 03 Xícaras de Farinha de trigo;
+		4.2.3 - Adicionar 04 Colheres de Achocolatado em pó;
+	4.3 - Adicionar o restante dos Úmidos:
+		4.3.1 - Adicionar 01 Xícara de Leite;
+		4.3.2 - Dispensar Xícara na pia para lavagem posterior;
+		4.3.3 - Adicionar 02 Colheres de Manteiga;
+		4.3.4 - Dispensar a colher utilizada nesta etapa na pia para lavagem posterior;
+	4.4 - Ligar o Liquidificador e bater por 05 minutos;
+	4.5 - Desligar o liquidificador após os 05 minutos e verificar se a massa está homogênea;
+	4.6 - Adicionar 02 Colheres de Fermento e mexer suavemente até dissolver meio a massa;
+	4.7 - Dispensar a colher utilizada nesta etapa na pia para lavagem posterior;
+	4.8 - Despejar massa na Forma untada e levar ao Forno pré-aquecido por 45 minutos;
+	4.9 - Dispensar o copo do Liquidificador na pia para lavagem juntamente com os demais utensílios;
+
+5 - Finalização
+	5.1 - Após 40 minutos desligar Forno;
+	5.2 - Com auxílio de uma luva de proteção retirar Bolo já assado do Forno;
+	5.3 - Aguardar 10 minutos;
+	5.4 - Se utilizou forma de furo central: Manusear bolo e desemformar sobre um prato ou travessa.
+	5.5 - Senão bolo pode ser consumido na própria forma.

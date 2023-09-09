@@ -1,0 +1,46 @@
+#LÓGICA IMPERATIVA - DESENVOLVIMENTO 3
+
+*ENUNCIADO:
+
+Em uma inscrição, o usuário informou os seguintes dados:
+
+- Nome: José Almeida da Silva
+- CPF: 12345678900
+- RG: 9517530
+- Altura: 1,78
+- Endereço: Rua A, 380 – Centro – Recife/PE
+
+No algoritmo, descreva como será:
+1. o identificador das variáveis;
+2. a declaração das variáveis com seus respectivos identificadores e tipos de dado;
+3. a utilização do comando de atribuição, apresentando identificador e dado.
+
+
+*RESOLUÇÃO:
+
+- Nome: José Almeida da Silva
+- CPF: 12345678900
+- RG: 9517530
+- Altura: 1,78
+- Endereço: Rua A, 380 – Centro – Recife/PE
+
+1 - Identificador da Variáveis:
+nome
+cpf
+rg
+altura
+endereco
+
+2 - Declaração das variáveis com seus respectivos identificadores e tipos de dado
+var nome: caracter
+var cpf: inteiro
+var rg: inteiro
+var altura: real
+var endereco: caracter
+
+3 - Atribuição
+nome <- "José Almeida da Silva"
+cpf <- 12345678900
+rg <- 9517530
+altura <- 1,78
+endereco <- "Rua A, 380 – Centro – Recife/PE"

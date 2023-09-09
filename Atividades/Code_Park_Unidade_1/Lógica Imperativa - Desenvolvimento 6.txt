@@ -1,0 +1,33 @@
+#LÓGICA IMPERATIVA - DESENVOLVIMENTO 6
+
+*ENUNCIADO:
+
+Num torneio de e-sports é necessário que todos os integrantes da mesma equipe tenham etiquetas que os identifiquem. Por exemplo, se o nome da equipe é “Os Lutadores”, o primeiro membro deve ter uma etiqueta “Os Lutadores – 1", o segundo membro “Os Lutadores – 2", e assim pela frente.
+Elabore um algoritmo que permita ao usuário inserir o nome da equipe, e imprime etiquetas para os 5 membros da equipe seguindo o exemplo mostrado acima.
+
+
+*RESOLUÇÃO:
+
+Algoritmo "Desenvolvimento 6 - Impressão etiquetas"
+// Disciplina   : [Algoritmo]
+// Professor   : Jefferson Vieira
+// Descrição   : Imprime etiquetas com nome do time + sequência numerada
+// Autor(a)    : Renan Tavares
+// Data atual  : 24/07/2023
+
+Var
+// Seção de Declarações das variáveis 
+C: inteiro
+Eqp: caracter
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+EscrevaL("Digite o nome de sua EQUIPE")
+Leia(Eqp)
+C<- 1
+Repita
+      EscrevaL(Eqp, " -", C)
+      C<- C+1
+Ate (C>5)
+
+Fimalgoritmo

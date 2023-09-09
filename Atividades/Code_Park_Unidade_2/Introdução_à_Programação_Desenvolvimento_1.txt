@@ -1,0 +1,25 @@
+#INTRODUÇÃO À PROGRAMAÇÃO - DESENVOLVIMENTO 1
+
+*ENUNCIADO:
+
+Cada exercício da tabela em anexo tem declaração de variáveis e, na sequência, uma sentença que usa as variáveis e operadores lógicos. Determine qual é o resultado final (Verdadeiro ou Falso) de cada sentença. 
+
+
+*RESOLUÇÃO:
+
+	VARIÁVEIS		SENTENÇA					RESPOSTA
+----------------------------------------------------------------------------------------
+1	nota = 10		nota<=10					True
+----------------------------------------------------------------------------------------
+2	nota = 6		(nota<=6) and (faltas<=3)			False
+	faltas = 4
+----------------------------------------------------------------------------------------
+3	convidados = 3		(convidados>4) or (fumante == True)		False
+	fumante = False
+----------------------------------------------------------------------------------------
+4	dia = "qua"		(dia == "sab") or (dia == "dom")		False
+----------------------------------------------------------------------------------------
+5	feriado = True		not (feriado == False)				True
+----------------------------------------------------------------------------------------
+6	dia = "ter"		(dia == "seg") or !(feriado == False)		False
+	feriado = False

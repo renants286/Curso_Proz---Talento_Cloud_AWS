@@ -1,0 +1,45 @@
+#LÓGICA IMPERATIVA - DESENVOLVIMENTO 5
+
+*ENUNCIADO:
+
+Elabore um algoritmo que possa descobrir, através de perguntas e respostas, em qual área de um restaurante uma pessoa ou grupo de pessoas precisa ser alocada.
+O restaurante tem três áreas: térreo, 1ro andar, e área externa.
+Clientes fumantes ou com animais de estimação precisam ser alocadas na área externa.
+Grupos de 5 ou mais precisam ser alocados no 1º andar, pois não dá para juntar mesas no térreo.
+Qualquer outro grupo de pessoas pode ser alocado no térreo. 
+
+
+*RESOLUÇÃO:
+
+Algoritmo "Desenvolvimento 5 - Tomada de decisão"
+// Disciplina   : [Algoritmo]
+// Professor   : Jefferson Vieira
+// Descrição   : Processo decisório para alocação de clientes em um Restaurante
+// Autor(a)    : Renan Tavares da Silva
+// Data atual  : 23/07/2023
+
+Var
+// Seção de Declarações das variáveis 
+RespA: caracter
+RespB: inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+EscrevaL("Seja bem vindo ao Restaurante Polenta Frita!")
+EscrevaL("Responda as perguntas a seguir para sua melhor acomodação:")
+EscrevaL("1. Você ou algum de seus eventuais acompanhantes é FUMANTE ou está com algum PET? [S / N]")
+Leia(RespA)
+Escolha RespA
+        Caso "S"
+             EscrevaL("Dirija-se a ÁREA EXTERNA")
+        Caso "N"
+             EscrevaL("2. Qual o nº de pessoas do seu GRUPO?")
+             Leia(RespB)
+             Se (RespB >= 5) entao
+                EscrevaL("Dirija-se ao 1º ANDAR")
+             senao
+                  EscrevaL("Dirija-se ao TÉRREO")
+             FimSe
+FimEscolha
+
+Fimalgoritmo

@@ -1,0 +1,60 @@
+* {
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+
+header h1 {
+    background-color: #0f47ae;
+    color: #f8da0a;
+}
+
+header a img {
+    display: inline-block; /* Torna a imagem um elemento inline-block */
+    vertical-align: middle; /* Alinha verticalmente com o texto */
+    margin-right: 20px; /* Adicione espaçamento à direita para separar do título */
+}
+  
+
+main{
+    padding-top: 10vh;
+}
+
+nav a {
+    color: #cd211c;
+    text-decoration: none;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+li {
+    list-style-type: none;
+}
+
+footer {
+    background-color: #0f47ae;
+    color: #f8da0a;
+}
+
+.nav-flex {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0f47ae;
+}
+
+.main-flex {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

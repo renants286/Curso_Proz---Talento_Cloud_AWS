@@ -1,0 +1,64 @@
+#LÓGICA IMPERATIVA - DESENVOLVIMENTO 2
+
+*ENUNCIADO:
+
+Em uma sala de aula, há vinte e cinco alunos. Entre eles, existem os grupos dos que gostam de Português (P) e os que gostam de Matemática (M). Eles estão organizados na sala de forma alternada, conforme apresentado a seguir:
+
+Chegaram mais onze alunos nessa turma e o professor organizou a turma da seguinte maneira:
+
+No entanto, o professor se ausentou da sala por cinco minutos e, ao voltar, percebeu que um aluno que gosta de uma das disciplinas havia trocado de lugar com alguém que prefere a outra.
+
+Sabendo que o professor tem dificuldade de memorizar, informe como ele descobriu a cadeira em que houve a troca de alunos e qual a disciplina de cada um.  
+
+
+*RESOLUÇÃO:
+
+Em uma sala de aula, há vinte e cinco alunos. Entre eles, existem os grupos dos que gostam de Português (P) e os que gostam de Matemática (M). Eles estão organizados na sala de forma alternada, conforme apresentado a seguir:
+
+	P P M P M
+	M P M M P
+	M M M P M
+	M P P M P
+	P M M P M
+
+Chegaram mais onze alunos nessa turma e o professor organizou a turma da seguinte maneira:
+
+	P P M P M P
+	M P M M P M
+	M M M P M P
+	M P P M P P
+	P M M P M M
+	M P P P M P
+
+No entanto, o professor se ausentou da sala por cinco minutos e, ao voltar, percebeu que um aluno que gosta de uma das disciplinas havia trocado de lugar com alguém que prefere a outra.
+
+	P P M P M P
+	M P M M P M
+	M M M P M P
+	M P M M P P
+	P M M P P M
+	M P P P M P
+
+Sabendo que o professor tem dificuldade de memorizar, informe como ele descobriu a cadeira em que houve a troca de alunos e qual a disciplina de cada um.
+
+
+RESOLUÇÃO:
+ 
+- Na distribuição dos 25 alunos o professor já havia adotado um padrão. Tomando por base os alunos de Português, por exemplo, a distribuição respeitou o seguinte padrão:
+	* Colunas, da esquerda para direita: 	2-3-1-3-2;
+	* Linhas, de baixo para cima: 		2-3-1-2-3;
+
+- Com a chegada de onze alunos extras, o professor criou mais uma linha na parte de baixo e uma coluna extra do lado direito, possibilitando uma melhor distribuição numérica entre filas e colunas:
+	* Colunas, da esquerda para direita (Português): 	2-4-2-4-2-4;
+	* Linhas, de baixo para cima (Português): 		4-2-4-2-2-4;
+
+- Dessa maneira o professor deveria lembrar de 2 regras principais:
+	* Para o caso de filas (ou colunas) a distribução de alunos de Português inicia em 2 e alterna para 4 na 2ª fila e respeita esse padrão até o fim;
+	* Quando observa as linhas esse padrão se mantém, porém inicia em 4 e ao final inverte-se os números das 2 últimas linhas;
+
+- Com essas informações o professor seria capaz de observar ao retornar para sala que:
+	* Colunas, da esquerda para direita (Português): 	2-4-1-4-3-4;
+	* Linhas, de baixo para cima (Português): 		4-3-3-2-2-4;
+	* Houve uma troca na 3ª coluna com a 3ª linha;
+	* Houve uma troca na 5ª coluna com a 2ª linha;
+	

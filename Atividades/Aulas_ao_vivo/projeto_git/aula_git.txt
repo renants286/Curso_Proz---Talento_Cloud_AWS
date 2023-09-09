@@ -1,0 +1,3 @@
+Frase escrita antes do merge.
+Frase escrita para o primeiro commit.
+Frase escrita na nova-branch

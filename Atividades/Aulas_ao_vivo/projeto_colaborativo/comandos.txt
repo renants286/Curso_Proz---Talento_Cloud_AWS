@@ -1,0 +1,4 @@
+1 - git init
+2 - git config user.name "Alexandre"
+3 - git user-email "alexandresouza@gmail.com"
+4 - add -A
