@@ -1,0 +1,25 @@
+const id = 37
+let username = 'renan.37'
+let password = 'abcd1234'
+let admin = true
+
+
+if (37 == id || 'renan.37' == username){
+  console.log('Quer atualizar sua senha?')
+} else {
+  console.log('Usuário não autorizado')
+}
+
+
+if ('renan.37' == username && 'abcd1234' == password){
+  console.log('Por favor, insira sua nova senha')
+  password = ''
+} else {
+  console.log('Username / senha incorretos')
+}
+
+if (admin == false){
+  console.log('Bem-vindo(a) à área de administrador')
+} else {
+  console.log('Você não pode acessar esta parte do sistema')
+}
