@@ -1,0 +1,38 @@
+### TABELA INSTRUMENTO ###
+
+CREATE TABLE instrumento (
+	id_instrumento SERIAL PRIMARY KEY,
+  	nome VARCHAR(24) NOT NULL,
+  	preco float,
+  	em_promocao BOOLEAN
+)
+
+SELECT * from instrumento
+
+INSERT into instrumento
+	(nome, preco, em_promocao)
+VALUES
+	('guitarra', 120.10, FALSE)
+    
+SELECT id_instrumento, nome, preco FROM instrumento WHERE preco<500
+SELECT nome, preco from instrumento WHERE id_instrumento = 3
+SELECT nome, preco from instrumento where em_promocao = TRUE
+SELECT preco FROM instrumento WHERE nome = 'violino'
+
+
+### TABELA VENDEDOR ###
+
+CREATE TABLE vendedor (
+	id_vendedor SERIAL PRIMARY KEY,
+  	nome VARCHAR(24) NOT NULL,
+  	contato INT,
+  	salario FLOAT NOT NULL,
+  	comissionado BOOLEAN DEFAULT TRUE
+)
+
+SELECT * from vendedor
+
+INSERT into vendedor
+	(nome, contato, salario, comissionado)
+VALUES
+	('Alceu', 11118888, 5000.10, FALSE)

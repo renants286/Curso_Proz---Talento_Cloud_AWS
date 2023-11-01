@@ -1,0 +1,95 @@
+CREATE TABLE artista(
+	id SERIAL PRIMARY KEY,
+	nome VARCHAR(24) UNIQUE
+)
+ 
+CREATE TABLE musica(
+	id SERIAL PRIMARY key,
+	nome VARCHAR(24) not NULL
+)
+ 
+CREATE table gravacao(
+	id SERIAL PRIMARY KEY,
+    duracao_seg INT NOT NULL
+)
+   
+--------------------REGRA DO NEGOCIO ----------------------
+  
+--- APAGAR TABELA ---
+DROP TABLE gravacao;
+
+--- ALTERAR TABELA ---
+ALTER TABLE musica
+add COLUMN duracao_seg INT not NULL
+
+--- ADICIONAR DADOS ---
+insert into artista (nome)
+values 	('Slash'),
+		('Teodoro e Sampaio'),
+        ('Nx Zero')
+
+SELECT * FROM artista;
+
+insert into musica (nome,duracao_seg)
+values 	('Anastasia',120),
+		('Paixão Proibida',150),
+        ('Pela Última Vez',140)
+        
+SELECT * FROM musica
+
+--- RELACIONAR TABELAS (fk) ---
+ALTER TABLE musica
+ADD COLUMN id_artista INT REFERENCES artista(ID)
+
+UPDATE musica
+set id_artista = (SELECT id FROM artista WHERE nome = 'Nx Zero')
+WHERE nome = 'Pela Última Vez'
+
+UPDATE musica
+set id_artista = (SELECT id FROM artista WHERE nome = 'Teodoro e Sampaio')
+WHERE nome = 'Paixão Proibida'
+
+UPDATE musica
+set id_artista = (SELECT id FROM artista WHERE nome = 'Slash')
+WHERE nome = 'Anastasia'
+
+--- CRIAR TABELA ALBUM, ADD CHAVE ESTRANGEIRA EM MUSICA REFERENCIANDO ALBUM ---
+CREATE TABLE album(
+	id SERIAL PRIMARY KEY,
+	nome VARCHAR(24) NOT NULL
+)
+
+--- ADICIONA ALBUNS NA TABELA ---
+insert into album (nome)
+values 	('Apocalyptic Love'),
+		('Bis'),
+        ('Tempestade Bipolar')
+        
+SELECT * FROM album
+
+--- RELACIONA COM MUSICA ---
+ALTER TABLE musica
+ADD COLUMN id_album INT REFERENCES album(ID)
+
+UPDATE musica
+set id_album = (SELECT id FROM album WHERE nome = 'Apocalyptic Love')
+WHERE nome = 'Anastasia'
+
+UPDATE musica
+set id_album = (SELECT id FROM album WHERE nome = 'Bis')
+WHERE nome = 'Paixão Proibida'
+
+UPDATE musica
+set id_album = (SELECT id FROM album WHERE nome = 'Tempestade Bipolar')
+WHERE nome = 'Pela Última Vez'
+
+-------------------------------------------------------
+
+ALTER TABLE musica
+DROP CONSTRAINT musica_id_artista_fkey;
+
+alter table musica
+ADD CONSTRAINT id_artista_fk
+FOREIGN key (id_artista) REFERENCES artista(id)
+
+DELETE from artista where nome = 'Nx Zero'

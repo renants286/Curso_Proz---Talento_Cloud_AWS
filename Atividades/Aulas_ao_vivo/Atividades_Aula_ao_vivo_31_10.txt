@@ -1,0 +1,54 @@
+CREATE FUNCTION soma(num1 INT, num2 INT)
+	RETURNS INT AS
+    $$
+    	BEGIN
+        	return num1 + num2;
+        end;
+	$$ LANGUAGE plpgsql
+
+SELECT soma(50,20)
+
+
+
+CREATE OR REPLACE FUNCTION divide(num1 FLOAT, num2 FLOAT)
+	RETURNS FLOAT AS
+    $$
+    	BEGIN
+        	IF num2=0 THEN RAISE EXCEPTION 'Divisão não permitida';
+            end IF;
+        	return num1 / num2;
+        end;
+	$$ LANGUAGE plpgsql
+
+SELECT divide(100.1,50)
+
+
+
+CREATE TABLE produto(
+  id SERIAL PRIMARY KEY,
+  nome VARCHAR(16) NOT NULL UNIQUE,
+  preco FLOAT NOT NULL);
+
+INSERT INTO produto(nome, preco)
+	VALUES	('Bicicleta', 789.90),
+    		('Patins', 234.50),
+            ('Scooter', 450.00);
+            
+SELECT * from produto
+
+CREATE FUNCTION desconto(preco FLOAT, desconto FLOAT)
+	RETURNS FLOAT AS
+    	$$
+        	BEGIN
+            	RETURN preco * (1-desconto);
+            END;
+        $$ LANGUAGE plpgsql;
+        
+SELECT desconto(270, 0.25)
+
+SELECT
+	nome as "Nome DO produto",
+    preco AS "Preço Original",
+    desconto(preco, 0.10) as "Preço com desconto"
+    FROM
+    produto;
