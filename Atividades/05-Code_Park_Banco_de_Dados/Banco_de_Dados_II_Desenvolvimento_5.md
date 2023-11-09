@@ -1,0 +1,11 @@
+*INSTRUÇÃO:
+Após uma varredura rápida no sistema de banco de dados de uma empresa de vendas, identificamos a necessidade de melhorar a segurança dessas informações. Por isso, será necessário desenvolver um novo banco para armazenar os dados mais importantes, como detalhes dos clientes, valores faturados diariamente e informações sobre os produtos, além de outros. Sendo assim, explique quais são os pilares da segurança de dados que devem ser seguidos para que o novo banco seja bem projetado e funcione corretamente.
+
+*RESOLUÇÃO:
+Existem vários pilares da segurança de dados que devem ser seguidos ao projetar o novo banco de dados. Os 3 principais pilares a serem considerados são:
+
+Confidencialidade: Este é o alicerce da segurança de dados. A confidencialidade garante que apenas pessoas autorizadas possam acessar informações sensíveis. Para isso, é crucial implementar medidas como autenticação robusta, que exige senhas fortes e, preferencialmente, a autenticação de dois fatores (2FA) para garantir que apenas as pessoas certas tenham acesso. Além disso, a criptografia de dados é fundamental, tanto em repouso (quando estão armazenados) quanto em trânsito (durante a transferência de dados), usando protocolos seguros, como SSL/TLS.
+
+Integridade: A integridade dos dados envolve garantir que as informações armazenadas não sejam corrompidas, alteradas ou comprometidas de forma não autorizada. Uma maneira de alcançar isso é através de técnicas como assinaturas digitais e hashes. As assinaturas digitais permitem verificar se os dados não foram modificados durante a transferência, enquanto os hashes geram valores únicos que representam o estado original dos dados. Qualquer alteração nos dados resultará em um hash diferente, indicando uma possível violação.
+
+Disponibilidade: Os dados precisam estar disponíveis quando necessário. Para isso, é essencial implementar estratégias de backup regular para evitar a perda de dados devido a falhas de hardware, erros humanos ou ataques. A recuperação de desastres também é fundamental, garantindo que, em caso de eventos catastróficos, como incêndios ou inundações, os dados possam ser restaurados. Além disso, a redundância de servidores (usando múltiplos servidores para armazenar os dados) ajuda a manter a disponibilidade, minimizando o tempo de inatividade.

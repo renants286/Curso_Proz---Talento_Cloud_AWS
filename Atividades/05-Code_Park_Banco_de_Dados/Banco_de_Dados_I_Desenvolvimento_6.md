@@ -12,6 +12,7 @@ De acordo com os comandos aprendidos, programe códigos SQL para criar um banco 
 
 * RESOLUÇÃO:
 
+```sql
 CREATE DATABASE IF NOT EXISTS DATAFILE 'ESCOLA';
 
 CREATE TABLE ALUNO (
@@ -25,3 +26,4 @@ INSERT INTO ALUNO (nome, email, endereco) VALUES
   ('João Carlos', 'Jcarlos@gmail.com', 'Rua 13 de maio'),
   ('José Vitor', 'Jvitor@gmail.com', 'Rua da Saudade'),
   ('Paulo André', 'Pandr@gmail.com', 'Rua do Sol');
+  ```

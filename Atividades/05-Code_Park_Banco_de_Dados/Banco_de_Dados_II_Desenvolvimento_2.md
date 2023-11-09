@@ -1,5 +1,6 @@
 Crie um banco de dados, adicione tabelas e determine quais são os atributos de cada uma. Em seguida, execute um trigger que se relacione com algum comando, como insert, select, delete ou update.
 
+```sql
 CREATE DATABASE IF NOT EXISTS DATAFILE 'LojaInformatica';
 USE LojaInformatica
 
@@ -31,11 +32,13 @@ INSERT INTO pedido (item, quantidade, fk_id_cliente) VALUES
     ('monitor', 8, 3),
     ('teclado', 1, 1),
     ('mousepad', 4, 2);
+```
 
 
 ################################################################
 *EXEMPLO DE TRIGGER:
 
+```sql
 CREATE TRIGGER after_pedido_insert
 AFTER INSERT ON pedido
 FOR EACH ROW
@@ -43,5 +46,6 @@ BEGIN
     INSERT INTO pedido_log (pedido_id, action_type, action_timestamp)
     VALUES (NEW.ID, 'INSERT', NOW());
 END;
+```
 
 Este trigger será acionado após a inserção de um novo pedido na tabela "pedido", e irá inserir um registro correspondente na tabela "pedido_log", que (em teoria) foi previamente criada para armazenar esses logs.

@@ -9,12 +9,15 @@ Desenvolva um banco de dados e relacione tabelas através de chaves estrangeiras
 *RESOLUÇÃO:
 
 1.
+```sql
 CREATE DATABASE IF NOT EXISTS DATAFILE 'LojaInformatica';
 USE LojaInformatica
+```
 
 ################################################################
 
 2. e 3.
+```sql
 CREATE TABLE cliente (
     ID SERIAL PRIMARY KEY,
     nome VARCHAR(16) not NULL,
@@ -29,10 +32,12 @@ CREATE TABLE pedido (
     fk_id_cliente INT NOT NULL,
     CONSTRAINT fk_cliente FOREIGN KEY (fk_id_cliente) REFERENCES cliente(id)
 );
+```
 
 ################################################################
 
 4.
+```sql
 INSERT INTO cliente (nome, idade, cidade) VALUES
     ('João Alves', 48, 'São Paulo'),
     ('Roberto Garcia', 36, 'Rio de Janeiro'),
@@ -46,10 +51,12 @@ INSERT INTO pedido (item, quantidade, fk_id_cliente) VALUES
     ('monitor', 8, 3),
     ('teclado', 1, 1),
     ('mousepad', 4, 2);
+```
 
 ################################################################
 
 5.
+```sql
 SELECT cliente.nome, pedido.item
 FROM pedido
     CROSS JOIN cliente
@@ -103,5 +110,6 @@ RESULTADO DA CONSULTA:
 "João Alves"	"teclado"
 "Roberto Garcia"	"mousepad"
 "Rebeca Giglio"	"null"
+```
 
 
